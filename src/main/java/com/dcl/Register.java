@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -46,13 +47,20 @@ public class Register extends HttpServlet{
     	}
         
         if(i>0) {
-    		resp.getWriter().println("<h1>Data added successfully</h1>");
+//    		resp.getWriter().println("<h1>Data added successfully</h1>");
+        	req.setAttribute("success", "Suuccesfully registerd!");
+        	RequestDispatcher rd=req.getRequestDispatcher("Register.jsp");
+            rd.forward(req, resp);
+        	
     	} else {
-    		resp.getWriter().println("<h1>Failed to add the data</h1>");
+    		req.setAttribute("Error", "Failed to registered");
+    		RequestDispatcher rd=req.getRequestDispatcher("Register.jsp");
+    		rd.forward(req, resp);
     	}
     	
     } else {
-    	resp.getWriter().println("<h1>ReEnter the password</h1>");
+    	req.setAttribute("Error", "Failed to registered");
+    	req.getRequestDispatcher("Register.jsp").forward(req, resp);
     }
 
     
