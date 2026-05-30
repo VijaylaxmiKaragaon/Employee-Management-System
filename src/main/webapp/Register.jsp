@@ -10,6 +10,15 @@
 <form action="Register" method="post">
 
 <h1>Employee Application Form</h1>
+<%String successMessage=(String)request.getAttribute("success"); %>
+    <%if(successMessage!=null){ %>
+    <%=successMessage%>
+    <%} %>
+    
+    <%String errorMessage=(String)request.getAttribute("error"); %>
+    <%if(errorMessage!=null){ %>
+    <%=errorMessage %>
+    <%} %>
 <table>
 <tr>
 

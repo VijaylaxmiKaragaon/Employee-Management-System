@@ -53,13 +53,13 @@ public class Register extends HttpServlet{
             rd.forward(req, resp);
         	
     	} else {
-    		req.setAttribute("Error", "Failed to registered");
+    		req.setAttribute("error", "Failed to registered");
     		RequestDispatcher rd=req.getRequestDispatcher("Register.jsp");
     		rd.forward(req, resp);
     	}
     	
     } else {
-    	req.setAttribute("Error", "Failed to registered");
+    	req.setAttribute("error", "Failed to registered");
     	req.getRequestDispatcher("Register.jsp").forward(req, resp);
     }
 
