@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="Register" method="post">
+
+<h1>Employee Application Form</h1>
+<table>
+<tr>
+
+<td>Employee name:</td>
+<td><input name="name" type="text"></input></td>
+</tr>
+
+<tr>
+<td>Job:</td>
+<td>
+<select name="job">Job:
+<option >---Select job--</option>
+<option value="developer">Developer</option>
+<option value="HR">HR</option>
+<option value="Tester">Tester</option>
+</select>
+</td>
+
+</tr>
+
+<tr>
+<td>Employee Salary:</td>
+<td><input name="sal" type="number"></input></td>
+</tr>
+
+<td>Employee Dno:</td>
+<td><input name="dno" type="number"></input></td>
+</tr>
+
+<td>Employee mail:</td>
+<td><input name="mail" type="email"></input></td>
+</tr>
+
+<td>Set a new Password:</td>
+<td><input name="password" type="text"></input></td>
+</tr>
+
+<td>Confirm Password:</td>
+<td><input name="confirm" type="text"></input></td>
+</tr>
+
+<tr>
+<td><button name="Register">Register</button></td>
+</tr>
+
+<tr>
+<td>Already have acc?<a href="login.html">login</a></td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>
